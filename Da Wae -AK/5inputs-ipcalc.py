@@ -85,9 +85,11 @@ def main():
 	o3 = input("OCTET 3 : ")
 	o4 = input("OCTET 4 : ")
 	cidr = input("CIDR :")
-	print (o1,o2,o3,o4, "/", cidr)
+	print (o1,'.',o2,'.',o3,'.',o4, "/", cidr)
 	ipv4[0] = o1; ipv4[1] = o2; ipv4[2] = o3; ipv4[3] = o4;   
 	nmask = getnmask(cidr,nmask)
-	print('cidr',cidr,nmask)
+	print('BROADCAST-IP:',bcast,'\nNET-ID:',netid,'\nCIDR:','/' + cidr,'NET-MASK:',nmask)
+	print('STARTING IP:', startingip)
+	print('ENDING IP:', endingip)
 	print(ipv4,nmask,end='')
 main()
